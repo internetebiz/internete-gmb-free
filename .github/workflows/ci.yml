@@ -1,0 +1,64 @@
+name: QA
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  qa:
+    name: PHP Lint & Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP 8.1
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          tools: composer
+
+      - name: Install PHPCS + WordPress standards
+        working-directory: internete-gmb-reviews
+        run: composer install --no-progress --prefer-dist
+
+      # -----------------------------------------------------------------------
+      # Step 1: PHP syntax — fatal crash prevention
+      # -----------------------------------------------------------------------
+      - name: PHP syntax check
+        run: |
+          echo "Checking PHP syntax..."
+          ERROR=0
+          while IFS= read -r -d '' file; do
+            if ! php -l "$file" > /dev/null 2>&1; then
+              php -l "$file"
+              ERROR=1
+            fi
+          done < <(find internete-gmb-reviews -name "*.php" -not -path "*/vendor/*" -print0)
+          if [ $ERROR -ne 0 ]; then
+            echo "::error::PHP syntax errors found. Fix before merging."
+            exit 1
+          fi
+          echo "All PHP files passed syntax check."
+
+      # -----------------------------------------------------------------------
+      # Step 2: Security scan — blocks on errors
+      # -----------------------------------------------------------------------
+      - name: PHPCS security scan (blocks on errors)
+        working-directory: internete-gmb-reviews
+        run: |
+          vendor/bin/phpcs --standard=phpcs-security.xml \
+            --warning-severity=0 \
+            --report=full \
+            --colors \
+            .
+
+      # -----------------------------------------------------------------------
+      # Step 3: Full WordPress standards — advisory only
+      # -----------------------------------------------------------------------
+      - name: PHPCS WordPress standards (advisory)
+        working-directory: internete-gmb-reviews
+        run: vendor/bin/phpcs --standard=phpcs.xml --report=summary --colors . || true

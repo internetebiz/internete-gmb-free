@@ -1,0 +1,338 @@
+/**
+ * Internete GMB Reviews — Admin Styles
+ */
+
+/* =========================================================================
+   Page wrapper
+   ========================================================================= */
+.internete-gmb-settings {
+    max-width: 1200px;
+}
+
+.internete-gmb-settings h1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 8px;
+}
+
+/* Pro Active badge next to heading */
+.internete-gmb-pro-badge {
+    display: inline-block;
+    background: #1d6327;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+/* =========================================================================
+   Two-column layout: main + sidebar
+   ========================================================================= */
+.internete-gmb-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 24px;
+    align-items: start;
+    margin-top: 8px;
+}
+
+.internete-gmb-main-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.internete-gmb-sidebar-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 32px;
+}
+
+/* =========================================================================
+   Cards
+   ========================================================================= */
+.internete-gmb-card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 24px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+
+.internete-gmb-card h2 {
+    margin: 0 0 8px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.internete-gmb-card h3 {
+    margin: 20px 0 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.internete-gmb-card > p {
+    margin: 0 0 16px;
+    color: #646970;
+    font-size: 13px;
+}
+
+/* =========================================================================
+   Stats block
+   ========================================================================= */
+.internete-gmb-stats {
+    background: #f6f7f7;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    padding: 4px 16px;
+    margin: 16px 0;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #dcdcde;
+    font-size: 13px;
+}
+
+.stat-item:last-child {
+    border-bottom: none;
+}
+
+.stat-label {
+    font-weight: 500;
+    color: #1d2327;
+}
+
+.stat-value {
+    color: #2271b1;
+    font-weight: 600;
+}
+
+/* =========================================================================
+   Shortcode box
+   ========================================================================= */
+.internete-gmb-shortcode-box {
+    background: #f6f7f7;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 0 20px;
+    gap: 12px;
+}
+
+.internete-gmb-shortcode-box code {
+    font-size: 14px;
+    background: transparent;
+    padding: 0;
+    color: #1d2327;
+}
+
+/* =========================================================================
+   Tables
+   ========================================================================= */
+.internete-gmb-card table.widefat {
+    margin-top: 4px;
+    font-size: 13px;
+}
+
+.internete-gmb-card table.widefat code {
+    background: #f0f0f1;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* =========================================================================
+   Form
+   ========================================================================= */
+.form-table th {
+    width: 180px;
+    font-size: 13px;
+}
+
+.form-table input[type="text"].regular-text {
+    width: 100%;
+    max-width: 380px;
+}
+
+.button-large {
+    height: auto !important;
+    padding: 10px 22px !important;
+    font-size: 13px !important;
+}
+
+/* =========================================================================
+   Pro Sidebar
+   ========================================================================= */
+.internete-gmb-pro-sidebar {
+    border-color: #2271b1;
+    padding: 20px;
+}
+
+.internete-gmb-pro-sidebar-header {
+    margin-bottom: 16px;
+}
+
+.internete-gmb-pro-label {
+    display: inline-block;
+    background: #2271b1;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 7px;
+    border-radius: 2px;
+    margin-bottom: 8px;
+}
+
+.internete-gmb-pro-sidebar h3 {
+    margin: 8px 0 6px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1d2327;
+}
+
+.internete-gmb-pro-sidebar p {
+    font-size: 12px;
+    color: #646970;
+    margin: 0 0 16px;
+    line-height: 1.5;
+}
+
+.internete-gmb-pro-features {
+    list-style: none;
+    margin: 0 0 20px;
+    padding: 0;
+    border-top: 1px solid #dcdcde;
+}
+
+.internete-gmb-pro-features li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid #dcdcde;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.internete-gmb-pro-features li strong {
+    display: block;
+    color: #1d2327;
+    font-size: 12px;
+    margin-bottom: 1px;
+}
+
+.internete-gmb-pro-features li span {
+    color: #646970;
+}
+
+.internete-gmb-pro-check {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    background: #1d6327;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+
+.internete-gmb-pro-cta {
+    display: block;
+    width: 100%;
+    text-align: center !important;
+    padding: 10px 0 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    height: auto !important;
+    background: #2271b1 !important;
+    border-color: #2271b1 !important;
+    box-shadow: 0 2px 6px rgba(34,113,177,.3) !important;
+}
+
+.internete-gmb-pro-cta:hover {
+    background: #135e96 !important;
+    border-color: #135e96 !important;
+}
+
+.internete-gmb-pro-sub {
+    text-align: center;
+    font-size: 11px !important;
+    color: #646970 !important;
+    margin: 8px 0 0 !important;
+}
+
+/* Help card */
+.internete-gmb-help-card h3 {
+    margin-top: 0;
+}
+
+.internete-gmb-help-card ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.internete-gmb-help-card ul li {
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f1;
+    font-size: 13px;
+}
+
+.internete-gmb-help-card ul li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* =========================================================================
+   Responsive
+   ========================================================================= */
+@media (max-width: 1100px) {
+    .internete-gmb-layout {
+        grid-template-columns: 1fr;
+    }
+    .internete-gmb-sidebar-col {
+        position: static;
+    }
+    .internete-gmb-pro-sidebar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .internete-gmb-pro-sidebar-header {
+        flex: 1;
+        min-width: 200px;
+        margin-bottom: 0;
+    }
+    .internete-gmb-pro-features {
+        flex: 2;
+        min-width: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    .internete-gmb-pro-sidebar {
+        flex-direction: column;
+    }
+}

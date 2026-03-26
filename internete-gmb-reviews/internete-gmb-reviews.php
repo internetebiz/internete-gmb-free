@@ -3,7 +3,7 @@
  * Plugin Name: Internete GMB Reviews
  * Plugin URI: https://internete.net/gmb-reviews
  * Description: Lightweight Google My Business reviews plugin that displays your Google reviews beautifully and improves SEO without slowing down your site.
- * Version: 2.2.9
+ * Version: 2.3.0
  * Author: Internete
  * Author URI: https://internete.net
  * License: GPLv2 or later
@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('INTERNETE_GMB_VERSION', '2.2.9');
+define('INTERNETE_GMB_VERSION', '2.3.0');
 define('INTERNETE_GMB_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('INTERNETE_GMB_PLUGIN_URL', plugin_dir_url(__FILE__));
 
@@ -35,6 +35,8 @@ if (is_admin()) {
     require_once INTERNETE_GMB_PLUGIN_DIR . 'admin/settings-page.php';
     require_once INTERNETE_GMB_PLUGIN_DIR . 'admin/settings-handler.php';
     require_once INTERNETE_GMB_PLUGIN_DIR . 'admin/upsell.php';
+    require_once INTERNETE_GMB_PLUGIN_DIR . 'includes/updater.php';
+    new Internete_GMB_Updater( __FILE__ );
 }
 
 // Activation hook

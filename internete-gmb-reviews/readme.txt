@@ -4,7 +4,7 @@ Tags: google reviews, google my business, google business profile, reviews, test
 Requires at least: 5.8
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 2.2.9
+Stable tag: 2.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -198,6 +198,9 @@ Basic usage:
 5. Pro upsell sidebar — upgrade path clearly shown in admin
 
 == Changelog ==
+
+= 2.3.0 - 2026-03-26 =
+* NEW: GitHub auto-updater — updates now appear in WP Admin > Plugins automatically
 
 = 2.2.9 - 2026-03-26 =
 * FIX: show_date="no" now correctly hides dates in grid/list/horizontal layouts

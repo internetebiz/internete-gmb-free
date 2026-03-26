@@ -1,0 +1,7 @@
+CLAUDE.md
+*.md.bak
+.DS_Store
+Thumbs.db
+internete-gmb-reviews/vendor/
+internete-gmb-reviews/composer.lock
+build/

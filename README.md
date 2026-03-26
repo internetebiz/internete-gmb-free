@@ -1,5 +1,7 @@
 # Internete GMB Reviews
 
+![Internete GMB Reviews](assets/banner.png)
+
 **Display your Google Business Profile reviews beautifully on any WordPress site — without slowing it down.**
 
 Reviews are synced once and stored locally in your WordPress database. No live API calls on page load. Zero impact on page speed.
@@ -28,7 +30,7 @@ Reviews are synced once and stored locally in your WordPress database. No live A
 3. Click **Install Now**, then **Activate**
 
 ### Manual Installation
-1. Download `internete-gmb-reviews.zip` from the [latest release](https://github.com/internetebiz/internete-gmb/releases/latest)
+1. Download `internete-gmb-reviews.zip` from the [latest release](https://github.com/internetebiz/internete-gmb-free/releases/latest)
 2. Go to **Plugins → Add New → Upload Plugin**
 3. Upload the zip and activate
 
